@@ -1,0 +1,17 @@
+:root {
+  --primary: #5C28D4;
+  --primary-dark: #4a1fb1;
+  --secondary: #DD59B9;
+  --accent: #DF96CD;
+  --text-dark: #111;
+  --text-light: #fff;
+  --navbar-bg: #fff;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --input-border: rgba(102, 102, 102, 0.35);
+  --highlight: #2A1965;
+  --highlight2: #2B1B6A;
+  --header: #2A1A67;
+  --highlight-accent: #DF96CD;
+}
