@@ -1,0 +1,113 @@
+@import url('variables.css');
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--navbar-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: var(--shadow);
+}
+
+.nav-logo img {
+    height: 42px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    z-index: 9999;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    z-index: 9999;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    z-index: 9999;
+    transition: color 0.2s ease;
+}
+
+.nav-links a.active {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.login-btn, .signup-btn {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-light);
+    background-color: var(--navbar-bg);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    border: 0.5px solid var(--primary);
+}
+
+.login-btn {
+    color: var(--text-dark);
+    border-color: var(--text-dark);
+}
+
+.signup-btn {
+    color: var(--secondary);
+    border-color: var(--secondary);
+    margin-right: 30px;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background: var(--primary);
+    color: var(--text-light);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    z-index: 10001 !important;
+    position: relative;
+    padding: 12px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.hamburger:hover {
+    color: var(--secondary);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.hamburger:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hamburger:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
