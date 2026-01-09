@@ -1,0 +1,244 @@
+/* Study Cards Page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('variables.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--highlight), var(--accent));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.study-cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.sidebar {
+    position: absolute;
+    left: 50px;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    width: 200px;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar h2 {
+    color: var(--text-light);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--text-light);
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar li.active {
+    background: var(--accent);
+    font-weight: bold;
+}
+
+.sidebar button.btn-next {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+.sidebar button.btn-generate {
+    margin-top: 20px; 
+    width: 100%;
+    background: var(--highlight2);
+    color: var(--text-light);
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar button.btn-generate:hover {
+    background: var(--primary);
+}
+
+.study-card-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.study-card {
+    background: var(--navbar-bg);
+    border-radius: 20px;
+    padding: 40px;
+    width: 600px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 2;
+}
+
+.shadow-card {
+    position: absolute;
+    width: 600px;
+    height: 140px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    top: 30px;
+}
+
+.shadow-card.second {
+    top: 60px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.study-card .highlight {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.btn-prev, .btn-next, .btn-reverse, .btn-delete {
+    background: var(--highlight2);
+    color: var(--text-light);
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-prev:hover, .btn-next:hover, .btn-reverse:hover {
+    background: var(--primary);
+}
+
+.btn-delete {
+    background-color: #dc3545 !important;
+    color: var(--text-light);
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-delete:hover {
+    background-color: #c82333 !important;
+}
+
+@media (max-width: 376px) {
+    .study-cards-container {
+        display: flex;
+        flex-direction: column; 
+        margin-top: 80px; 
+        padding: 10px;
+    }
+
+    /* Fiszka na górze */
+    .study-card {
+        width: 95%;
+        max-width: 350px;
+        padding: 20px;
+        font-size: 16px;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .study-card-wrapper {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    /* Przyciski pod fiszką */
+    .buttons {
+        order: 2;
+        justify-content: space-between;
+        gap: 5px;
+        margin-bottom: 30px;
+    }
+
+    .btn-prev,
+    .btn-next,
+    .btn-reverse {
+        padding: 10px 8px;
+        font-size: 12px;
+        flex: 1;
+        margin: 0 2px;
+    }
+
+    /* Lista folderów na dole */
+    .sidebar {
+        order: 3;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding: 15px;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .sidebar li {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .shadow-card {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .shadow-card.second {
+        display: none;
+    }
+}
