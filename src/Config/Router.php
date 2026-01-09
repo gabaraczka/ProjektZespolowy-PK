@@ -19,7 +19,7 @@ class Router {
 
         foreach ($this->routes as $route) {
             if ($route['method'] === $requestMethod) {
-                // Check for exact match first
+
                 if ($route['path'] === $requestPath) {
                     $this->executeRoute($route['handler']);
                     return;
