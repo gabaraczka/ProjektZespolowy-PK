@@ -348,6 +348,163 @@ body {
     font-size: 12px;
 }
 
+@media (max-width: 376px) {
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: url('/assets/images/image.png') no-repeat center center/cover;
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+        min-height: 100vh;
+        overflow-y: auto;
+        position: relative;
+        padding-top: 60px;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .white-block {
+        flex-direction: column;
+        padding: 15px 10px;
+        margin: 20px auto 20px;
+        gap: 20px;
+        border-radius: 20px;
+        width: 98%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+    }
+
+    .left-section,
+    .right-section,
+    .sidebar {
+        flex: 1 1 100%;
+        padding: 0;
+        border: none;
+    }
+
+    .left-section {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .file-list {
+        max-height: 250px;
+        font-size: 13px;
+        padding: 10px;
+        background: rgba(249, 249, 249, 0.9);
+    }
+
+    .material-label a {
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        white-space: normal;
+        display: inline-block;
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .button-row {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .add-folder-btn,
+    .remove-material-btn,
+    .upload-btn {
+        flex: 1;
+        font-size: 12px;
+        padding: 8px 4px;
+        margin-top: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .right-section {
+        padding-left: 0;
+    }
+
+    #summaryResult,
+    #notesInput,
+    .sidebar {
+        font-size: 12px;
+        padding: 10px;
+        background: rgba(249, 249, 249, 0.9);
+    }
+
+    .button-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        background: rgba(244, 194, 243, 0.9);
+        border-radius: 25px;
+        padding: 15px 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        margin-top: 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .button-group button,
+    .button-group form button {
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        font-size: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+        margin: 0;
+        flex-shrink: 0;
+        border-radius: 50%;
+    }
+
+    .button-group button i,
+    .button-group form button i {
+        font-size: 16px;
+        color: var(--primary);
+        margin: 0;
+    }
+
+    .scrollable-section,
+    .scrollable-summary {
+        max-height: 180px;
+        font-size: 12px;
+    }
+
+    .button-group .btn-text {
+        display: none;
+    }
+
+    body::after {
+        content: '';
+        display: block;
+        height: 10px;
+    }
+
+    #loading {
+        display: none !important;
+    }
+
+    .container {
+        min-height: calc(100vh - 60px);
+        padding: 10px 0;
+    }
+
+    html {
+        height: 100%;
+    }
+}
+
 .notes-section {
     margin-top: 15px;
     padding: 10px;
