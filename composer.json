@@ -11,7 +11,8 @@
         "ext-pgsql": "*",
         "openai-php/client": "^0.13.0",
         "nyholm/psr7": "^1.8",
-        "guzzlehttp/guzzle": "^7.8"
+        "guzzlehttp/guzzle": "^7.8",
+        "phpunit/phpunit": "^10"
     },
     "config": {
         "optimize-autoloader": true,
